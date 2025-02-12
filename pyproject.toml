@@ -1,0 +1,37 @@
+[project]
+name = "evals-playground"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "UFO-101", email = "josephmiller101@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "inspect-ai>=0.3.63",
+    "openai>=1.62.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+    "ipython>=8.31.0",
+    "pre-commit>=4.0.1",
+    "pyright>=1.1.391",
+    "pytest>=8.3.4",
+]
+
+[tool.ruff]
+line-length = 88
+
+[tool.pytest.ini_options]
+# Only typecheck during tests because it messes with debugger
+beartype_packages = "evals_playground"
+
+[tool.pyright]
+reportMissingParameterType = true
+reportUnknownParameterType = true
