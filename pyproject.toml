@@ -8,6 +8,7 @@ authors = [
 ]
 requires-python = ">=3.10"
 dependencies = [
+    "datasets>=3.2.0",
     "inspect-ai>=0.3.63",
     "openai>=1.62.0",
 ]
